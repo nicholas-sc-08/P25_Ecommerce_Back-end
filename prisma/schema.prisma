@@ -37,15 +37,18 @@ model ProductVariant {
   size      String
   price     Float
   quantity  Int
+  discount  Float
   product   Product @relation(fields: [productId], references: [id])
   productId Int
 }
 
 model Category {
-  id       Int @id @default(autoincrement())
-  icon     String
-  name     String @unique
-  products Product[]
+  id        Int @id @default(autoincrement())
+  icon      String
+  name      String @unique
+  products  Product[]
+  bgColor   String
+  textColor String
 }
 
 model Image {
