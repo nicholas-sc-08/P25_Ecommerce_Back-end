@@ -38,18 +38,24 @@ export type CategoryMinAggregateOutputType = {
   id: number | null
   icon: string | null
   name: string | null
+  bgColor: string | null
+  textColor: string | null
 }
 
 export type CategoryMaxAggregateOutputType = {
   id: number | null
   icon: string | null
   name: string | null
+  bgColor: string | null
+  textColor: string | null
 }
 
 export type CategoryCountAggregateOutputType = {
   id: number
   icon: number
   name: number
+  bgColor: number
+  textColor: number
   _all: number
 }
 
@@ -66,18 +72,24 @@ export type CategoryMinAggregateInputType = {
   id?: true
   icon?: true
   name?: true
+  bgColor?: true
+  textColor?: true
 }
 
 export type CategoryMaxAggregateInputType = {
   id?: true
   icon?: true
   name?: true
+  bgColor?: true
+  textColor?: true
 }
 
 export type CategoryCountAggregateInputType = {
   id?: true
   icon?: true
   name?: true
+  bgColor?: true
+  textColor?: true
   _all?: true
 }
 
@@ -171,6 +183,8 @@ export type CategoryGroupByOutputType = {
   id: number
   icon: string
   name: string
+  bgColor: string
+  textColor: string
   _count: CategoryCountAggregateOutputType | null
   _avg: CategoryAvgAggregateOutputType | null
   _sum: CategorySumAggregateOutputType | null
@@ -200,6 +214,8 @@ export type CategoryWhereInput = {
   id?: Prisma.IntFilter<"Category"> | number
   icon?: Prisma.StringFilter<"Category"> | string
   name?: Prisma.StringFilter<"Category"> | string
+  bgColor?: Prisma.StringFilter<"Category"> | string
+  textColor?: Prisma.StringFilter<"Category"> | string
   products?: Prisma.ProductListRelationFilter
 }
 
@@ -207,6 +223,8 @@ export type CategoryOrderByWithRelationInput = {
   id?: Prisma.SortOrder
   icon?: Prisma.SortOrder
   name?: Prisma.SortOrder
+  bgColor?: Prisma.SortOrder
+  textColor?: Prisma.SortOrder
   products?: Prisma.ProductOrderByRelationAggregateInput
 }
 
@@ -217,6 +235,8 @@ export type CategoryWhereUniqueInput = Prisma.AtLeast<{
   OR?: Prisma.CategoryWhereInput[]
   NOT?: Prisma.CategoryWhereInput | Prisma.CategoryWhereInput[]
   icon?: Prisma.StringFilter<"Category"> | string
+  bgColor?: Prisma.StringFilter<"Category"> | string
+  textColor?: Prisma.StringFilter<"Category"> | string
   products?: Prisma.ProductListRelationFilter
 }, "id" | "name">
 
@@ -224,6 +244,8 @@ export type CategoryOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
   icon?: Prisma.SortOrder
   name?: Prisma.SortOrder
+  bgColor?: Prisma.SortOrder
+  textColor?: Prisma.SortOrder
   _count?: Prisma.CategoryCountOrderByAggregateInput
   _avg?: Prisma.CategoryAvgOrderByAggregateInput
   _max?: Prisma.CategoryMaxOrderByAggregateInput
@@ -238,11 +260,15 @@ export type CategoryScalarWhereWithAggregatesInput = {
   id?: Prisma.IntWithAggregatesFilter<"Category"> | number
   icon?: Prisma.StringWithAggregatesFilter<"Category"> | string
   name?: Prisma.StringWithAggregatesFilter<"Category"> | string
+  bgColor?: Prisma.StringWithAggregatesFilter<"Category"> | string
+  textColor?: Prisma.StringWithAggregatesFilter<"Category"> | string
 }
 
 export type CategoryCreateInput = {
   icon: string
   name: string
+  bgColor: string
+  textColor: string
   products?: Prisma.ProductCreateNestedManyWithoutCategoriesInput
 }
 
@@ -250,12 +276,16 @@ export type CategoryUncheckedCreateInput = {
   id?: number
   icon: string
   name: string
+  bgColor: string
+  textColor: string
   products?: Prisma.ProductUncheckedCreateNestedManyWithoutCategoriesInput
 }
 
 export type CategoryUpdateInput = {
   icon?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
+  bgColor?: Prisma.StringFieldUpdateOperationsInput | string
+  textColor?: Prisma.StringFieldUpdateOperationsInput | string
   products?: Prisma.ProductUpdateManyWithoutCategoriesNestedInput
 }
 
@@ -263,6 +293,8 @@ export type CategoryUncheckedUpdateInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   icon?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
+  bgColor?: Prisma.StringFieldUpdateOperationsInput | string
+  textColor?: Prisma.StringFieldUpdateOperationsInput | string
   products?: Prisma.ProductUncheckedUpdateManyWithoutCategoriesNestedInput
 }
 
@@ -270,17 +302,23 @@ export type CategoryCreateManyInput = {
   id?: number
   icon: string
   name: string
+  bgColor: string
+  textColor: string
 }
 
 export type CategoryUpdateManyMutationInput = {
   icon?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
+  bgColor?: Prisma.StringFieldUpdateOperationsInput | string
+  textColor?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
 export type CategoryUncheckedUpdateManyInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   icon?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
+  bgColor?: Prisma.StringFieldUpdateOperationsInput | string
+  textColor?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
 export type CategoryListRelationFilter = {
@@ -297,6 +335,8 @@ export type CategoryCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
   icon?: Prisma.SortOrder
   name?: Prisma.SortOrder
+  bgColor?: Prisma.SortOrder
+  textColor?: Prisma.SortOrder
 }
 
 export type CategoryAvgOrderByAggregateInput = {
@@ -307,12 +347,16 @@ export type CategoryMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
   icon?: Prisma.SortOrder
   name?: Prisma.SortOrder
+  bgColor?: Prisma.SortOrder
+  textColor?: Prisma.SortOrder
 }
 
 export type CategoryMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
   icon?: Prisma.SortOrder
   name?: Prisma.SortOrder
+  bgColor?: Prisma.SortOrder
+  textColor?: Prisma.SortOrder
 }
 
 export type CategorySumOrderByAggregateInput = {
@@ -360,12 +404,16 @@ export type CategoryUncheckedUpdateManyWithoutProductsNestedInput = {
 export type CategoryCreateWithoutProductsInput = {
   icon: string
   name: string
+  bgColor: string
+  textColor: string
 }
 
 export type CategoryUncheckedCreateWithoutProductsInput = {
   id?: number
   icon: string
   name: string
+  bgColor: string
+  textColor: string
 }
 
 export type CategoryCreateOrConnectWithoutProductsInput = {
@@ -396,23 +444,31 @@ export type CategoryScalarWhereInput = {
   id?: Prisma.IntFilter<"Category"> | number
   icon?: Prisma.StringFilter<"Category"> | string
   name?: Prisma.StringFilter<"Category"> | string
+  bgColor?: Prisma.StringFilter<"Category"> | string
+  textColor?: Prisma.StringFilter<"Category"> | string
 }
 
 export type CategoryUpdateWithoutProductsInput = {
   icon?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
+  bgColor?: Prisma.StringFieldUpdateOperationsInput | string
+  textColor?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
 export type CategoryUncheckedUpdateWithoutProductsInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   icon?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
+  bgColor?: Prisma.StringFieldUpdateOperationsInput | string
+  textColor?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
 export type CategoryUncheckedUpdateManyWithoutProductsInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   icon?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
+  bgColor?: Prisma.StringFieldUpdateOperationsInput | string
+  textColor?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
 
@@ -450,6 +506,8 @@ export type CategorySelect<ExtArgs extends runtime.Types.Extensions.InternalArgs
   id?: boolean
   icon?: boolean
   name?: boolean
+  bgColor?: boolean
+  textColor?: boolean
   products?: boolean | Prisma.Category$productsArgs<ExtArgs>
   _count?: boolean | Prisma.CategoryCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["category"]>
@@ -458,21 +516,27 @@ export type CategorySelectCreateManyAndReturn<ExtArgs extends runtime.Types.Exte
   id?: boolean
   icon?: boolean
   name?: boolean
+  bgColor?: boolean
+  textColor?: boolean
 }, ExtArgs["result"]["category"]>
 
 export type CategorySelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
   icon?: boolean
   name?: boolean
+  bgColor?: boolean
+  textColor?: boolean
 }, ExtArgs["result"]["category"]>
 
 export type CategorySelectScalar = {
   id?: boolean
   icon?: boolean
   name?: boolean
+  bgColor?: boolean
+  textColor?: boolean
 }
 
-export type CategoryOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "icon" | "name", ExtArgs["result"]["category"]>
+export type CategoryOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "icon" | "name" | "bgColor" | "textColor", ExtArgs["result"]["category"]>
 export type CategoryInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   products?: boolean | Prisma.Category$productsArgs<ExtArgs>
   _count?: boolean | Prisma.CategoryCountOutputTypeDefaultArgs<ExtArgs>
@@ -489,6 +553,8 @@ export type $CategoryPayload<ExtArgs extends runtime.Types.Extensions.InternalAr
     id: number
     icon: string
     name: string
+    bgColor: string
+    textColor: string
   }, ExtArgs["result"]["category"]>
   composites: {}
 }
@@ -916,6 +982,8 @@ export interface CategoryFieldRefs {
   readonly id: Prisma.FieldRef<"Category", 'Int'>
   readonly icon: Prisma.FieldRef<"Category", 'String'>
   readonly name: Prisma.FieldRef<"Category", 'String'>
+  readonly bgColor: Prisma.FieldRef<"Category", 'String'>
+  readonly textColor: Prisma.FieldRef<"Category", 'String'>
 }
     
 
